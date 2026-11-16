@@ -87,7 +87,7 @@ public class MemberController extends HttpServlet {
 			
 		case MemberConfig.MODIFY_FORM :
 			
-			nextPage = generateView("modify_form");
+			nextPage = generateView("/modify_form");
 			
 			int resultForModify = memberService.signupConfirm(request, response);
 			
@@ -100,7 +100,6 @@ public class MemberController extends HttpServlet {
 			}
 			
 			break;
-			
 			
 		}
 		

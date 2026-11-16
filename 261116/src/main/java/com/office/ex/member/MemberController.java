@@ -14,6 +14,7 @@ import com.office.ex.Config;
 @WebServlet("*.mem")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	MemberService memberService = new MemberService();
        
 
     public MemberController() {
@@ -29,18 +30,18 @@ public class MemberController extends HttpServlet {
 		String contextPath = request.getContextPath();
 		String command = RequestURI.substring(contextPath.length());
 
-		MemberService memberService = new MemberService();
+		
 		String nextPage = null;
 		
 		System.out.println("command: " + command);
 		
 		switch (command) {
-		case "/signup.mem":
+		case MemberConfig.SIGNUP:
 			nextPage = generateView("/signup_form");
 			
 			break;
 			
-		case "/signup_confirm.mem":
+		case MemberConfig.SIGNUP_CONFIRM:
 			// memberService = new MemberService();
 			
 			int resultForSignUp = memberService.signupConfirm(request, response);
@@ -55,12 +56,12 @@ public class MemberController extends HttpServlet {
 			
 			break;
 			
-		case "/signin.mem":
+		case MemberConfig.SIGNIN:
 			nextPage = generateView("/signin_form");
 			
 			break;
 			
-		case "/signin_confirm.mem":
+		case MemberConfig.SIGNIN_CONFIRM:
 			// memberService = new MemberService();
 			
 			int resultForSignIn = memberService.signinConfirm(request, response);
@@ -75,7 +76,7 @@ public class MemberController extends HttpServlet {
 			
 			break;
 			
-		case "/signout.mem" :
+		case MemberConfig.SIGNOUT :
 			
 			memberService.signoutConfirm(request, response);
 			
@@ -83,6 +84,23 @@ public class MemberController extends HttpServlet {
 					.concat(Config.HOME);
 			
 			break;
+			
+		case MemberConfig.MODIFY_FORM :
+			
+			nextPage = generateView("modify_form");
+			
+			int resultForModify = memberService.signupConfirm(request, response);
+			
+			if (resultForModify == MemberService.MODIFY_OK) {
+				nextPage = generateView("/signup_ok");
+				
+			} else {
+				nextPage = generateView("/signup_ng");
+				
+			}
+			
+			break;
+			
 			
 		}
 		

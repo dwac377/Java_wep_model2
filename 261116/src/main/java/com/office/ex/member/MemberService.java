@@ -14,6 +14,9 @@ public class MemberService {
 	final public static int SIGN_IN_OK = 1;
 	final public static int SIGN_IN_NG = 0;
 	
+	final public static int MODIFY_OK = 1;
+	final public static int MODIFY_NG = 0;
+	
 	MemberDao memberDao = new MemberDao();
 	
 	public int signupConfirm(HttpServletRequest request, HttpServletResponse response) {

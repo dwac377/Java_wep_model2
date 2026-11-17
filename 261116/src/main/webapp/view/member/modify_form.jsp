@@ -14,7 +14,7 @@
 	
 	<br><br>
 	
-	<form action="<%= request.getContextPath() %>/signup_confirm.mem" method="post">
+	<form action="<%= request.getContextPath() %>/modify_form.mem" method="post">
 	
 		<input type="password" name="memPw" placeholder="Input new member PW!!">
 		<br>

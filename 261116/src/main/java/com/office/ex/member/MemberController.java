@@ -80,24 +80,13 @@ public class MemberController extends HttpServlet {
 			
 			memberService.signoutConfirm(request, response);
 			
-			nextPage = request.getContextPath()
-					.concat(Config.HOME);
+			nextPage = Config.HOME;
 			
 			break;
 			
-		case MemberConfig.MODIFY_FORM :
+		case MemberConfig.MODIFY :
 			
-			nextPage = generateView("modify_form");
-			
-			int resultForModify = memberService.signupConfirm(request, response);
-			
-			if (resultForModify == MemberService.MODIFY_OK) {
-				nextPage = generateView("/signup_ok");
-				
-			} else {
-				nextPage = generateView("/signup_ng");
-				
-			}
+			nextPage = generateView("/modify_form");
 			
 			break;
 			

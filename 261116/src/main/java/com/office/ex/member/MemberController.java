@@ -87,19 +87,18 @@ public class MemberController extends HttpServlet {
 		case MemberConfig.MODIFY :
 			
 			nextPage = generateView("/modify_form");
-<<<<<<< HEAD
-=======
-			
-			int resultForModify = memberService.signupConfirm(request, response);
-			
-			if (resultForModify == MemberService.MODIFY_OK) {
-				nextPage = generateView("/signup_ok");
-				
-			} else {
-				nextPage = generateView("/signup_ng");
-				
-			}
->>>>>>> 395de3c0bc000cd65b529973abbcaed9b828c3fe
+
+//			
+//			int resultForModify = memberService.signupConfirm(request, response);
+//			
+//			if (resultForModify == MemberService.MODIFY_OK) {
+//				nextPage = generateView("/signup_ok");
+//				
+//			} else {
+//				nextPage = generateView("/signup_ng");
+//				
+//			}
+
 			
 			break;
 			

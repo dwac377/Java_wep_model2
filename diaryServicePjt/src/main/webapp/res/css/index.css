@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+article {
+	
+	width: 1000px;
+	margin: 50px auto 500px;
+}
+
+article div.art_wrap {
+	text-align: center;
+}

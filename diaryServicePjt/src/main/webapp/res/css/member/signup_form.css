@@ -1,0 +1,31 @@
+article {
+	width: 1000px;
+	margin: 50px auto 500px;
+}
+
+article div.art_wrap {
+	text-align: center;
+}
+
+/* 
+article div.art_wrap input {
+
+    width: 400px;
+    height: 15px;
+    padding: 10px 5px;
+    margin: 2px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-size: 1.2em;
+    outline: none;
+
+} common으로 이전 */ 
+
+/* 
+article div.art_wrap input[type="button"],
+article div.art_wrap input[type="reset"] {
+
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+} common으로 이전 */

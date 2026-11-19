@@ -35,12 +35,28 @@ public class MemberController extends HttpServlet {
 		String nextPage = null;
 		
 		switch (command) {
-		case "/signup_form.mem": {
+		case "/signup_form.mem": 
 			
 			nextPage = "view/member/signup_form.jsp";
 			
 			break;
-		}
+			
+		case "/signup_confirm.mem":
+			memberService = new MemberServiceForDW(new MemberDaoForMySQL());
+			int resultForSignup = memberService.signup(request, response);
+			
+			if (resultForSignup > 0) {
+				
+				nextPage = "view/member/signup_ok.jsp";
+			} else {
+				
+				nextPage = "view/member/signup_ng.jsp";
+			}
+		
+			
+		
+		
+		
 	}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);

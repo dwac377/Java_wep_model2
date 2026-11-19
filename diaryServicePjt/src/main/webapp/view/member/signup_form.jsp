@@ -25,7 +25,7 @@
 	<article>
 		<div class="art_wrap">
 
-			<form action="<%= request.getContextPath()%>/signun_confirm.mem"
+			<form action="<%= request.getContextPath()%>/signup_confirm.mem"
 					name="signup_form"
 					method="post">
 					

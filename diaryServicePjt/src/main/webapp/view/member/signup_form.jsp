@@ -42,7 +42,7 @@
 						placeholder="전화번호를 입력해주세요">
 					<br>
 					<input class="basic_input_button" type="button" value="회원 가입"
-						onclick="signupForm();">
+						onclick="signup_confirm();">
 
 					<input class="basic_input_button" type="reset" value="초기화">
 						

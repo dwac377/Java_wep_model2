@@ -4,7 +4,7 @@
    
 <script>
 
-	function signupForm() {
+	function signup_confirm() {
 		console.log('signupForm()!')
 		
 		
@@ -19,7 +19,7 @@
 		} else if (form.memPw.value === '') {
 			
 			alert('마 비밀번호 입력 와 안 하노!')
-			form.memId.focus();
+			form.memPw.focus();
 			
 		} else {
 			form.submit();
@@ -42,7 +42,7 @@
 		} else if (form.memPw.value === '') {
 			
 			alert('마 비밀번호 입력 와 안 하노!')
-			form.memId.focus();
+			form.memPw.focus();
 			
 		} else {
 			form.submit();

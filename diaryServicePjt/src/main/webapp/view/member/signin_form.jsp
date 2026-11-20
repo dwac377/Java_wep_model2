@@ -36,7 +36,7 @@
 						placeholder="비밀 번호를 입력해주세요">
 					<br>
 					<input class="basic_input_button" type="button" value="로그인"
-						onclick="signinForm();">
+						onclick="signin_confirm();">
 
 					<input class="basic_input_button" type="reset" value="초기화">
 						

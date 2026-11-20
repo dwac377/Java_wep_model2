@@ -23,8 +23,8 @@
 				<c:otherwise>
 				
 					<a href="<%= request.getContextPath()%>/signout_confirm.mem">SIGN-OUT</a>
-					<a href="<%= request.getContextPath()%>/diary_write_form.dir">DIARY-WRITE</a>
-					<a href="<%= request.getContextPath()%>/diary_list.dir">DIARY-LIST</a>
+					<a href="<%= request.getContextPath()%>/write_form.dir">DIARY-WRITE</a>
+					<a href="<%= request.getContextPath()%>/list.dir">DIARY-LIST</a>
 				
 				</c:otherwise>
 			

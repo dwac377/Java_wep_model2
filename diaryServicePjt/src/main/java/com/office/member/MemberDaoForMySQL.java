@@ -143,12 +143,12 @@ public class MemberDaoForMySQL implements IMemberDao{
 //			다리 건설 -> Connection 생성 by 인증(Authentication)
 			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 //			SQL 작성 (작업 지시서) CRUD
-			String sql = "select"
-						+ 	"*"
-						+ "from"
-						+ 	"tbl_member"
-						+ "where"
-						+ 	"memId = '?'";
+			String sql = "SELECT "
+						+ 	"* "
+						+ "FROM "
+						+ 	"tbl_member "
+						+ "WHERE "
+						+ 	"memId = ?";
 //			일꾼 선택 (생성) CRUD
 			pstmt = conn.prepareStatement(sql);
 //			데이터 주입

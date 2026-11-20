@@ -25,22 +25,16 @@ public class MemberDaoForMySQL implements IMemberDao{
 		try {
 //			메모리에 드라이버 로드
 			Class.forName(DRIVER);
-			
 //			다리 건설 -> Connection 생성 by 인증(Authentication)
 			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			
 //			SQL 작성 (작업 지시서) CRUD
 			String sql = "select count(*) cnt from tbl_member where memId = ?";
-			
 //			일꾼 선택 (생성) CRUD
 			pstmt = conn.prepareStatement(sql);
-			
 //			데이터 주입
 			pstmt.setString(1, memId);
-			
 //			작업 지시
 			rs = pstmt.executeQuery();
-			
 //			executeQuery(); select, 반환형R(ResultSet) -> while문으로 사용
 //			executeUpdate(); insert, update, delete. 반환형(int) -> 영향을 받은 행의 수
 			
@@ -48,7 +42,6 @@ public class MemberDaoForMySQL implements IMemberDao{
 			while (rs.next()) {
 				
 				result = rs.getInt("cnt");
-				
 			}
 			
 			
@@ -59,15 +52,14 @@ public class MemberDaoForMySQL implements IMemberDao{
 		} finally {
 //			외부 자원 해제
 			try {
+				
 				if(rs != null) rs.close();
 				if(pstmt != null) pstmt.close();
 				if(conn != null) conn.close();
-				
 			} catch (Exception e2) {
+				
 				e2.printStackTrace();
 			}
-			
-			
 			
 		}
 		
